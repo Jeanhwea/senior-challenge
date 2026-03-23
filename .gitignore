@@ -36,3 +36,6 @@ Thumbs.db
 
 # Test coverage
 coverage/
+
+# added
+apps/legacy-app/local-queue/*

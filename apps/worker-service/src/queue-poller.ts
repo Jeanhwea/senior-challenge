@@ -3,7 +3,8 @@ import * as path from 'path';
 import type { AnalysisRequestedEvent } from '@senior-challenge/shared-types';
 import type { MessageProcessor } from './processors/processor.interface';
 
-const QUEUE_DIR = path.join(process.cwd(), 'local-queue');
+// 使用根目录下的 shared-queue，确保 LegacyApp 和 WorkerService 使用同一个队列
+const QUEUE_DIR = path.join(process.cwd(), '..', '..', 'shared-queue');
 const POLL_INTERVAL_MS = 1000;
 
 /**
